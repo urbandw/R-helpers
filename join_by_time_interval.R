@@ -1,3 +1,6 @@
+require(dplyr)
+require(lubridate)
+
 join_by_time_interval = function(df1, df2, time_cols, max_delta, delta_units="days", 
                                  other_cols = NULL, absolute=TRUE, how="inner",
                                  closest_only=TRUE) {
