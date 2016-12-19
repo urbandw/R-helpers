@@ -100,9 +100,9 @@ join_by_time_interval = function(df1, df2, time_cols, max_delta, delta_units="da
     select_(paste0("-time_delta", suffix[2]))
   
   first_cols = c('time_x', 'time_y', 'time_delta')
-  df4[, c(first_cols, setdiff(names(df4), first_cols))]
+  df5 = df4[, c(first_cols, setdiff(names(df4), first_cols))]
   
-  df4
+  df5
 }
 
 
